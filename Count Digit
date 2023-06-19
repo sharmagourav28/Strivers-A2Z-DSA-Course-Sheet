@@ -1,0 +1,12 @@
+int count(int n){
+    //write your code here
+    int sum =0;
+    while(n>0){
+        
+        int lastdigit  = n%10;
+        sum++;
+        n= n/10;
+    
+    }
+    return sum;
+}
