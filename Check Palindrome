@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	int n;
+	cin>>n;
+	int k = n;
+	int rev = 0;
+
+	while(n>0){
+		int lst = n%10;
+		n=n/10;
+		rev = (rev*10)+lst;
+
+	}
+	if(rev == k){
+		cout<<"true"<<endl;
+	}
+	else{
+		cout<<"false"<<endl;
+	}
+	
+}
