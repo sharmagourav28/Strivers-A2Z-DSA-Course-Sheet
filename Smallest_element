@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int secondlargest(int arr[],int n){
+    int largest = arr[0];
+    int slargest = -1;
+    for(int i = 1;i<n;i++){
+    if(arr[i]>largest){
+        slargest = largest;
+        largest = arr[i];
+     }
+     else if(arr[i]>slargest && arr[i]<largest){
+         slargest =arr[i];
+     }
+    }
+    return slargest;
+}
+int secondsmallest(int arr[],int n){
+    int smallest = arr[0];
+    int ssmalest =INT_MAX;
+    for(int i = 1;i<n;i++){
+        if(arr[i]<smallest){
+            ssmalest  =smallest;
+            smallest = arr[i];
+        }
+        else  if(arr[i]!=smallest && arr[i]<ssmalest){
+            ssmalest= arr[i];
+        }
+    }
+    return ssmalest;
+}
+
+int lar(int arr[],int n){
+   int  lar1 =arr[0];
+    for(int i =0;i<n;i++){
+        if(arr[i]>lar1){
+            lar1 =arr[i];
+        }
+    }
+    return lar1;
+}
+
+int sec(int arr[],int n){
+    int sec1 = arr[0];
+    for(int i =0;i<n;i++){
+        if(arr[i]<sec1){
+            sec1 =arr[i];
+        }
+    }
+    return sec1;
+}
+int main(){
+    int arr[]={1,2,3,6,7,8};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    int l = lar(arr,size);
+    cout<<"largest element "<<l<<endl;
+    int sslargest = secondlargest(arr,size);
+    cout<<"Second largest "<<sslargest<<endl;
+    int s = sec(arr,size);
+    cout<<"Smallest element "<<s<<endl;
+    int sssmallest = secondsmallest(arr,size);
+    cout<<"Second smallest "<<sssmallest<<endl;
+}
