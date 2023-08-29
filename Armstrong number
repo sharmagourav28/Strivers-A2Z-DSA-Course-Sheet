@@ -1,22 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
 	// Write your code here
 	int n;
-	cin>>n;
+	cin >> n;
 	int k = n;
 	int sum = 0;
-	while(n>0){
-		int lst = n%10;
-		sum = sum+(lst*lst*lst);
-		n= n/10;
+	while (n > 0)
+	{
+		int lst = n % 10;
+		sum = sum + (lst * lst * lst);
+		n = n / 10;
 	}
-	if(sum == k){
-		cout<<"true"<<endl;
+	if (sum == k)
+	{
+		cout << "true" << endl;
 	}
-	else{
-		cout<<"false"<<endl;
+	else
+	{
+		cout << "false" << endl;
 	}
-	
 }
